@@ -1,0 +1,61 @@
+{
+  "target": "/Users/a001/Desktop/ai-test-workbench/targets/pypinyin/pypinyin/style/_tone_convert.py",
+  "tests": "runs/run01_blind/test_generated.py",
+  "label": "ai_final_1",
+  "total": 37,
+  "killed": 30,
+  "survived": 7,
+  "errors": 0,
+  "kill_rate": 81.08,
+  "survived_detail": [
+    {
+      "op": "布尔 True → False",
+      "line": 44,
+      "col": 37,
+      "before": "s = tone_to_tone2(pinyin, v_to_u=True)",
+      "after": "s = tone_to_tone2(pinyin, v_to_u=False)"
+    },
+    {
+      "op": "布尔 True → False",
+      "line": 108,
+      "col": 23,
+      "before": "pinyin, v_to_u=True, neutral_tone_with_five=neutral_tone_with_five)",
+      "after": "pinyin, v_to_u=False, neutral_tone_with_five=neutral_tone_with_five)"
+    },
+    {
+      "op": "布尔 True → False",
+      "line": 147,
+      "col": 23,
+      "before": "pinyin, v_to_u=True, neutral_tone_with_five=neutral_tone_with_five)",
+      "after": "pinyin, v_to_u=False, neutral_tone_with_five=neutral_tone_with_five)"
+    },
+    {
+      "op": "布尔 True → False",
+      "line": 152,
+      "col": 31,
+      "before": "def to_initials(pinyin, strict=True):",
+      "after": "def to_initials(pinyin, strict=False):"
+    },
+    {
+      "op": "布尔 True → False",
+      "line": 508,
+      "col": 41,
+      "before": "tone2 = tone3_to_tone2(tone3, v_to_u=True)",
+      "after": "tone2 = tone3_to_tone2(tone3, v_to_u=False)"
+    },
+    {
+      "op": "布尔 False → True",
+      "line": 546,
+      "col": 49,
+      "before": "def _improve_tone3(tone3, neutral_tone_with_five=False):",
+      "after": "def _improve_tone3(tone3, neutral_tone_with_five=True):"
+    },
+    {
+      "op": "布尔 False → True",
+      "line": 562,
+      "col": 28,
+      "before": "def _v_to_u(pinyin, replace=False):",
+      "after": "def _v_to_u(pinyin, replace=True):"
+    }
+  ]
+}

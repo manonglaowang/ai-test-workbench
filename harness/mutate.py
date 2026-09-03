@@ -26,37 +26,70 @@ OPERATORS = [
     ("索引 -1 → 0",        r'\[-1\]',                 '[0]'),
 ]
 
+def code_spans(src: str):
+    """用 tokenize 找出「真正的代码」区间，排除字符串字面量、docstring、注释。
+    返回 {行号: [(起列, 止列), ...]}"""
+    import tokenize, token as T
+    spans = {}
+    try:
+        toks = list(tokenize.generate_tokens(io.StringIO(src).readline))
+    except (tokenize.TokenError, IndentationError):
+        return None            # 解析失败则退回全行可变异
+    for tok in toks:
+        if tok.type in (T.STRING, T.COMMENT, T.NL, T.NEWLINE, T.INDENT, T.DEDENT, T.ENDMARKER):
+            continue
+        if tok.start[0] != tok.end[0]:
+            continue           # 跨行 token 跳过
+        spans.setdefault(tok.start[0], []).append((tok.start[1], tok.end[1]))
+    return spans
+
+
 def find_mutations(src: str):
-    """返回 [(算子名, 行号, 原行, 变异后整份源码)]"""
+    """返回变异体列表。只变异真实代码，跳过 docstring / 字符串 / 注释。"""
     lines = src.split('\n')
+    spans = code_spans(src)
     muts = []
     for i, line in enumerate(lines):
+        lineno = i + 1
         stripped = line.strip()
         if not stripped or stripped.startswith('#'):
             continue
+        allowed = spans.get(lineno) if spans is not None else None
+        if spans is not None and not allowed:
+            continue           # 该行没有可变异的代码 token（纯 docstring 行等）
         for name, pat, rep in OPERATORS:
             for m in re.finditer(pat, line):
+                if allowed is not None:
+                    inside = any(a <= m.start() and m.end() <= b for a, b in allowed)
+                    if not inside:
+                        continue      # 命中点落在字符串/注释里，跳过
                 new_line = line[:m.start()] + rep + line[m.end():]
                 if new_line == line:
                     continue
                 new_lines = lines[:]; new_lines[i] = new_line
                 candidate = '\n'.join(new_lines)
                 try:
-                    ast.parse(candidate)          # 语法必须仍合法
+                    ast.parse(candidate)
                 except SyntaxError:
                     continue
                 muts.append({
-                    "op": name, "line": i + 1,
+                    "op": name, "line": lineno, "col": m.start(),
                     "before": line.strip(), "after": new_line.strip(),
                     "src": candidate,
                 })
     return muts
 
+
 def run_tests(test_path, cwd, python_bin, timeout=120, extra=None):
     """返回 True=测试全通过"""
     cmd = [python_bin, "-m", "pytest", str(test_path), "-q", "--no-header", "-x", "-p", "no:cacheprovider"]
     if extra: cmd += extra
-    r = subprocess.run(cmd, cwd=cwd, capture_output=True, text=True, timeout=timeout)
+    # 关键：禁止写 .pyc。
+    # Python 的字节码缓存失效判据是「源文件 mtime(秒级) + 文件大小」。
+    # 连续两个变异体若字节数相同（如 False→True 都是 -1 字节）且在同一秒内写入，
+    # 解释器会复用上一个变异体的 .pyc，导致跑的不是当前变异体 → 结果随机翻转。
+    env = dict(os.environ, PYTHONDONTWRITEBYTECODE="1", PYTHONHASHSEED="0")
+    r = subprocess.run(cmd, cwd=cwd, capture_output=True, text=True, timeout=timeout, env=env)
     return r.returncode == 0
 
 def main():
