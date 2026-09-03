@@ -1,0 +1,252 @@
+{
+  "target": "/Users/a001/Desktop/ai-test-workbench/targets/pypinyin/pypinyin/style/_tone_convert.py",
+  "tests": "targets/pypinyin/tests/contrib/test_tone_convert.py",
+  "label": "baseline_owntests",
+  "total": 75,
+  "killed": 35,
+  "survived": 40,
+  "errors": 0,
+  "kill_rate": 46.67,
+  "survived_detail": [
+    {
+      "op": "布尔 True → False",
+      "line": 41,
+      "before": ">>> to_normal('lüè', v_to_u=True)",
+      "after": ">>> to_normal('lüè', v_to_u=False)"
+    },
+    {
+      "op": "布尔 True → False",
+      "line": 44,
+      "before": "s = tone_to_tone2(pinyin, v_to_u=True)",
+      "after": "s = tone_to_tone2(pinyin, v_to_u=False)"
+    },
+    {
+      "op": "布尔 True → False",
+      "line": 98,
+      "before": ">>> to_tone2('shang', neutral_tone_with_five=True)",
+      "after": ">>> to_tone2('shang', neutral_tone_with_five=False)"
+    },
+    {
+      "op": "布尔 True → False",
+      "line": 102,
+      "before": ">>> to_tone2('lüè', v_to_u=True)",
+      "after": ">>> to_tone2('lüè', v_to_u=False)"
+    },
+    {
+      "op": "布尔 True → False",
+      "line": 108,
+      "before": "pinyin, v_to_u=True, neutral_tone_with_five=neutral_tone_with_five)",
+      "after": "pinyin, v_to_u=False, neutral_tone_with_five=neutral_tone_with_five)"
+    },
+    {
+      "op": "布尔 False → True",
+      "line": 121,
+      "before": "当为 False 时结果中将使用 ``v`` 表示 ``ü``",
+      "after": "当为 True 时结果中将使用 ``v`` 表示 ``ü``"
+    },
+    {
+      "op": "布尔 True → False",
+      "line": 137,
+      "before": ">>> to_tone3('shang', neutral_tone_with_five=True)",
+      "after": ">>> to_tone3('shang', neutral_tone_with_five=False)"
+    },
+    {
+      "op": "布尔 True → False",
+      "line": 141,
+      "before": ">>> to_tone3('lüè', v_to_u=True)",
+      "after": ">>> to_tone3('lüè', v_to_u=False)"
+    },
+    {
+      "op": "布尔 True → False",
+      "line": 147,
+      "before": "pinyin, v_to_u=True, neutral_tone_with_five=neutral_tone_with_five)",
+      "after": "pinyin, v_to_u=False, neutral_tone_with_five=neutral_tone_with_five)"
+    },
+    {
+      "op": "布尔 True → False",
+      "line": 152,
+      "before": "def to_initials(pinyin, strict=True):",
+      "after": "def to_initials(pinyin, strict=False):"
+    },
+    {
+      "op": "布尔 True → False",
+      "line": 177,
+      "before": "def to_finals(pinyin, strict=True, v_to_u=False):",
+      "after": "def to_finals(pinyin, strict=False, v_to_u=False):"
+    },
+    {
+      "op": "布尔 False → True",
+      "line": 177,
+      "before": "def to_finals(pinyin, strict=True, v_to_u=False):",
+      "after": "def to_finals(pinyin, strict=True, v_to_u=True):"
+    },
+    {
+      "op": "布尔 False → True",
+      "line": 191,
+      "before": "当为 False 时结果中将使用 ``v`` 表示 ``ü``",
+      "after": "当为 True 时结果中将使用 ``v`` 表示 ``ü``"
+    },
+    {
+      "op": "布尔 True → False",
+      "line": 207,
+      "before": "def to_finals_tone(pinyin, strict=True):",
+      "after": "def to_finals_tone(pinyin, strict=False):"
+    },
+    {
+      "op": "布尔 True → False",
+      "line": 234,
+      "before": "def to_finals_tone2(pinyin, strict=True, v_to_u=False,",
+      "after": "def to_finals_tone2(pinyin, strict=False, v_to_u=False,"
+    },
+    {
+      "op": "布尔 False → True",
+      "line": 234,
+      "before": "def to_finals_tone2(pinyin, strict=True, v_to_u=False,",
+      "after": "def to_finals_tone2(pinyin, strict=True, v_to_u=True,"
+    },
+    {
+      "op": "布尔 False → True",
+      "line": 235,
+      "before": "neutral_tone_with_five=False):",
+      "after": "neutral_tone_with_five=True):"
+    },
+    {
+      "op": "布尔 False → True",
+      "line": 247,
+      "before": "当为 False 时结果中将使用 ``v`` 表示 ``ü``",
+      "after": "当为 True 时结果中将使用 ``v`` 表示 ``ü``"
+    },
+    {
+      "op": "布尔 True → False",
+      "line": 266,
+      "before": "def to_finals_tone3(pinyin, strict=True, v_to_u=False,",
+      "after": "def to_finals_tone3(pinyin, strict=False, v_to_u=False,"
+    },
+    {
+      "op": "布尔 False → True",
+      "line": 266,
+      "before": "def to_finals_tone3(pinyin, strict=True, v_to_u=False,",
+      "after": "def to_finals_tone3(pinyin, strict=True, v_to_u=True,"
+    },
+    {
+      "op": "布尔 False → True",
+      "line": 267,
+      "before": "neutral_tone_with_five=False):",
+      "after": "neutral_tone_with_five=True):"
+    },
+    {
+      "op": "布尔 False → True",
+      "line": 279,
+      "before": "当为 False 时结果中将使用 ``v`` 表示 ``ü``",
+      "after": "当为 True 时结果中将使用 ``v`` 表示 ``ü``"
+    },
+    {
+      "op": "布尔 True → False",
+      "line": 323,
+      "before": ">>> tone_to_normal('lüè', v_to_u=True)",
+      "after": ">>> tone_to_normal('lüè', v_to_u=False)"
+    },
+    {
+      "op": "布尔 False → True",
+      "line": 337,
+      "before": "当为 False 时结果中将使用 ``v`` 表示 ``ü``",
+      "after": "当为 True 时结果中将使用 ``v`` 表示 ``ü``"
+    },
+    {
+      "op": "布尔 True → False",
+      "line": 351,
+      "before": ">>> tone_to_tone2('shang', neutral_tone_with_5=True)",
+      "after": ">>> tone_to_tone2('shang', neutral_tone_with_5=False)"
+    },
+    {
+      "op": "布尔 True → False",
+      "line": 355,
+      "before": ">>> tone_to_tone2('lüè', v_to_u=True)",
+      "after": ">>> tone_to_tone2('lüè', v_to_u=False)"
+    },
+    {
+      "op": "布尔 False → True",
+      "line": 372,
+      "before": "当为 False 时结果中将使用 ``v`` 表示 ``ü``",
+      "after": "当为 True 时结果中将使用 ``v`` 表示 ``ü``"
+    },
+    {
+      "op": "布尔 True → False",
+      "line": 386,
+      "before": ">>> tone_to_tone3('shang', neutral_tone_with_five=True)",
+      "after": ">>> tone_to_tone3('shang', neutral_tone_with_five=False)"
+    },
+    {
+      "op": "布尔 True → False",
+      "line": 390,
+      "before": ">>> tone_to_tone3('lüè', v_to_u=True)",
+      "after": ">>> tone_to_tone3('lüè', v_to_u=False)"
+    },
+    {
+      "op": "布尔 False → True",
+      "line": 406,
+      "before": "当为 False 时结果中将使用 ``v`` 表示 ``ü``",
+      "after": "当为 True 时结果中将使用 ``v`` 表示 ``ü``"
+    },
+    {
+      "op": "布尔 True → False",
+      "line": 416,
+      "before": ">>> tone2_to_normal('lüe4', v_to_u=True)",
+      "after": ">>> tone2_to_normal('lüe4', v_to_u=False)"
+    },
+    {
+      "op": "逻辑 or → and",
+      "line": 443,
+      "before": "return d.get(s) or s",
+      "after": "return d.get(s) and s"
+    },
+    {
+      "op": "布尔 True → False",
+      "line": 464,
+      "before": ">>> tone2_to_tone3('lüe4', v_to_u=True)",
+      "after": ">>> tone2_to_tone3('lüe4', v_to_u=False)"
+    },
+    {
+      "op": "布尔 True → False",
+      "line": 487,
+      "before": ">>> tone3_to_normal('lüe4', v_to_u=True)",
+      "after": ">>> tone3_to_normal('lüe4', v_to_u=False)"
+    },
+    {
+      "op": "布尔 True → False",
+      "line": 508,
+      "before": "tone2 = tone3_to_tone2(tone3, v_to_u=True)",
+      "after": "tone2 = tone3_to_tone2(tone3, v_to_u=False)"
+    },
+    {
+      "op": "布尔 True → False",
+      "line": 528,
+      "before": ">>> tone3_to_tone2('lüe4', v_to_u=True)",
+      "after": ">>> tone3_to_tone2('lüe4', v_to_u=False)"
+    },
+    {
+      "op": "布尔 False → True",
+      "line": 546,
+      "before": "def _improve_tone3(tone3, neutral_tone_with_five=False):",
+      "after": "def _improve_tone3(tone3, neutral_tone_with_five=True):"
+    },
+    {
+      "op": "逻辑 and → or",
+      "line": 548,
+      "before": "if number is None and neutral_tone_with_five and tone3 != '':",
+      "after": "if number is None or neutral_tone_with_five and tone3 != '':"
+    },
+    {
+      "op": "逻辑 and → or",
+      "line": 548,
+      "before": "if number is None and neutral_tone_with_five and tone3 != '':",
+      "after": "if number is None and neutral_tone_with_five or tone3 != '':"
+    },
+    {
+      "op": "布尔 False → True",
+      "line": 562,
+      "before": "def _v_to_u(pinyin, replace=False):",
+      "after": "def _v_to_u(pinyin, replace=True):"
+    }
+  ]
+}
