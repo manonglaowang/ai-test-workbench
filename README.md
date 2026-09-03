@@ -96,7 +96,7 @@ to_tone3('sha5ng') == 'shang'
 ## 复现
 
 ```bash
-git clone https://github.com/<you>/ai-test-workbench.git
+git clone https://github.com/manonglaowang/ai-test-workbench.git
 cd ai-test-workbench
 
 python3 -m venv .venv
