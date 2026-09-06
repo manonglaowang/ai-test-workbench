@@ -1,0 +1,96 @@
+{
+  "target": "/Users/a001/Desktop/ai-test-workbench/targets/pypinyin/pypinyin/style/_tone_convert.py",
+  "tests": "runs/run04_direction/test_generated.py",
+  "label": "run04_1",
+  "total": 37,
+  "killed": 25,
+  "survived": 12,
+  "errors": 0,
+  "kill_rate": 67.57,
+  "survived_detail": [
+    {
+      "op": "布尔 True → False",
+      "line": 44,
+      "col": 37,
+      "before": "s = tone_to_tone2(pinyin, v_to_u=True)",
+      "after": "s = tone_to_tone2(pinyin, v_to_u=False)"
+    },
+    {
+      "op": "布尔 True → False",
+      "line": 108,
+      "col": 23,
+      "before": "pinyin, v_to_u=True, neutral_tone_with_five=neutral_tone_with_five)",
+      "after": "pinyin, v_to_u=False, neutral_tone_with_five=neutral_tone_with_five)"
+    },
+    {
+      "op": "布尔 True → False",
+      "line": 147,
+      "col": 23,
+      "before": "pinyin, v_to_u=True, neutral_tone_with_five=neutral_tone_with_five)",
+      "after": "pinyin, v_to_u=False, neutral_tone_with_five=neutral_tone_with_five)"
+    },
+    {
+      "op": "布尔 True → False",
+      "line": 152,
+      "col": 31,
+      "before": "def to_initials(pinyin, strict=True):",
+      "after": "def to_initials(pinyin, strict=False):"
+    },
+    {
+      "op": "布尔 True → False",
+      "line": 177,
+      "col": 29,
+      "before": "def to_finals(pinyin, strict=True, v_to_u=False):",
+      "after": "def to_finals(pinyin, strict=False, v_to_u=False):"
+    },
+    {
+      "op": "布尔 True → False",
+      "line": 207,
+      "col": 34,
+      "before": "def to_finals_tone(pinyin, strict=True):",
+      "after": "def to_finals_tone(pinyin, strict=False):"
+    },
+    {
+      "op": "布尔 True → False",
+      "line": 234,
+      "col": 35,
+      "before": "def to_finals_tone2(pinyin, strict=True, v_to_u=False,",
+      "after": "def to_finals_tone2(pinyin, strict=False, v_to_u=False,"
+    },
+    {
+      "op": "布尔 False → True",
+      "line": 235,
+      "col": 43,
+      "before": "neutral_tone_with_five=False):",
+      "after": "neutral_tone_with_five=True):"
+    },
+    {
+      "op": "布尔 True → False",
+      "line": 266,
+      "col": 35,
+      "before": "def to_finals_tone3(pinyin, strict=True, v_to_u=False,",
+      "after": "def to_finals_tone3(pinyin, strict=False, v_to_u=False,"
+    },
+    {
+      "op": "布尔 True → False",
+      "line": 508,
+      "col": 41,
+      "before": "tone2 = tone3_to_tone2(tone3, v_to_u=True)",
+      "after": "tone2 = tone3_to_tone2(tone3, v_to_u=False)"
+    },
+    {
+      "op": "布尔 False → True",
+      "line": 546,
+      "col": 49,
+      "before": "def _improve_tone3(tone3, neutral_tone_with_five=False):",
+      "after": "def _improve_tone3(tone3, neutral_tone_with_five=True):"
+    },
+    {
+      "op": "布尔 False → True",
+      "line": 562,
+      "col": 28,
+      "before": "def _v_to_u(pinyin, replace=False):",
+      "after": "def _v_to_u(pinyin, replace=True):"
+    }
+  ]
+}
