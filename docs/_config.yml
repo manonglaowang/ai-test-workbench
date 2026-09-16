@@ -1,0 +1,18 @@
+title: AI 测试工作台 · 实验记录
+description: AI 生成测试用例能力的可复现对照实验：盲测 + 变异测试。五轮实验，全部代码与原始数据开源。
+url: https://manonglaowang.github.io
+baseurl: /ai-test-workbench
+theme: jekyll-theme-primer
+lang: zh-CN
+author: 码农老王（王祥）
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      author: 码农老王（王祥）

@@ -1,5 +1,10 @@
 # AI 测试工作台 · 实验记录
 
+**📖 在线阅读**：https://manonglaowang.github.io/ai-test-workbench/
+
+- [我让 AI 写了 2392 个测试用例，前三轮一个 bug 都没抓到](https://manonglaowang.github.io/ai-test-workbench/AI生成测试用例的四轮实验)
+- [变异杀伤率 81%，一个 bug 没抓到](https://manonglaowang.github.io/ai-test-workbench/变异杀伤率81%一个bug没抓到)
+
 > **AI 能不能发现真实开源项目里、当时没被发现的 bug？**
 > 一个可复现的对照实验。数据难看也照实放。
 
