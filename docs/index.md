@@ -31,6 +31,8 @@ title: AI 测试工作台 · 实验记录
 - [run01 结果](../results/run01_结果.md) · [run02](../results/run02_结果.md) · [run03](../results/run03_结果.md) · [run04](../results/run04_结果.md)
 - [实验协议](实验协议.md)
 - [GitHub 仓库](https://github.com/manonglaowang/ai-test-workbench)
+- [**可直接安装的 Skill**](https://github.com/manonglaowang/ai-test-workbench/tree/main/skill) —— 三条指令 + 三个脚本
+- [关于作者](about.md)
 
 ---
 
